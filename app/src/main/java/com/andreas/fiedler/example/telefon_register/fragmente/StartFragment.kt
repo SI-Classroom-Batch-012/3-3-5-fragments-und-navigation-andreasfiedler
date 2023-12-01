@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.andreas.fiedler.example.telefon_register.R
 
-/
+
 class StartFragment : Fragment() {
 
 
