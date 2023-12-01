@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.andreas.fiedler.example.telefon_register.MainActivity
-import com.andreas.fiedler.example.telefon_register.R
 import com.andreas.fiedler.example.telefon_register.adapter.ItemAdapter
 import com.andreas.fiedler.example.telefon_register.databinding.FragmentStartBinding
 
@@ -36,6 +35,8 @@ class StartFragment : Fragment() {
 
 
     }
+
+
 
 
 }

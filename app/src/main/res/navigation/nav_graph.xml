@@ -9,7 +9,11 @@
         android:id="@+id/detailFragment"
         android:name="com.andreas.fiedler.example.telefon_register.fragmente.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/startFragment"
         android:name="com.andreas.fiedler.example.telefon_register.fragmente.StartFragment"
