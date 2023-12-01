@@ -5,18 +5,36 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.andreas.fiedler.example.telefon_register.MainActivity
 import com.andreas.fiedler.example.telefon_register.R
+import com.andreas.fiedler.example.telefon_register.adapter.ItemAdapter
+import com.andreas.fiedler.example.telefon_register.databinding.FragmentStartBinding
 
 
 class StartFragment : Fragment() {
 
 
+    private lateinit var binding: FragmentStartBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_start, container, false)
+        binding = FragmentStartBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val mainActivity = activity as MainActivity
+
+        val dataset = mainActivity.dataset
+        val adapter = ItemAdapter(dataset)
+        binding.contactRV.adapter = adapter
+
+
+
     }
 
 

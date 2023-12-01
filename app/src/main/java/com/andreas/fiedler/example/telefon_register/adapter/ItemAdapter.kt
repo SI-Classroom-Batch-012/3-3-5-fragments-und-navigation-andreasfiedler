@@ -2,10 +2,12 @@ package com.andreas.fiedler.example.telefon_register.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.ListFragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.andreas.fiedler.example.telefon_register.data.Adress
 import com.andreas.fiedler.example.telefon_register.databinding.ListItemBinding
+import com.andreas.fiedler.example.telefon_register.fragmente.StartFragmentDirections
 
 class ItemAdapter {
     class ItemAdapter(
@@ -45,8 +47,10 @@ class ItemAdapter {
             holder.binding.cityTV.text = item.city
 
             holder.binding.adressCV.setOnClickListener{
-                var navcontroller = holder.binding.root.findNavController()
-               // navcontroller.navigate(ListFragmentDirection.actionListFragmentToDetailFragment(position.toString()))
+                var navcontroller = holder.binding.root.findNavController().also {
+                    it.navigate(StartFragmentDirections.actionStartFragmentToDetailFragment())
+                }
+
             }
         }
 
